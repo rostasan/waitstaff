@@ -1,0 +1,104 @@
+<div class="container-fluid grid" ng-controller="MainCtrl">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Enter the Meal Details</h2>
+
+                    </div>
+                </div>
+            <form>
+                <div class="row">
+
+                        <div class="col-md-4 text-right">
+                             <span>Base Meal Price: $</span>
+                        </div>
+                        <div class="col-md-4">
+                            <span><input type="number" ng-model="mealPrice"/></span><br />
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-right">
+                        <span>Tax Rate: % </span>
+                    </div>
+                    <div class="col-md-4">
+                        <span><input type="number" ng-model="tax" /></span>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-right">
+                        <span>Tip Percentage: % </span>
+                    </div>
+                    <div class="col-md-4">
+                        <span><input type="number" ng-model="tip"/></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-right">
+                        <input type="submit" ng-click="add()" value="Submit" />
+                    </div>
+                    <div class="col-md-4">
+                        <input type="reset" value="Cancel" />
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+        </form>
+        <div class="col-md-6">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Customer CHarges</h2>
+                    </div>
+                </div>
+                <form>
+                    <div class="row">
+
+                        <div class="col-md-4 text-right">
+                            <span>Subtotal</span>
+                        </div>
+                        <div class="col-md-4">
+                            <span>{{subTotal}}</span><br />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 text-right">
+                            <span>Tip </span>
+                        </div>
+                        <div class="col-md-4">
+                            <span>{{tipTotal}}</span>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                    <div class="col-md-4 text-right">
+                        <span>My Earnings</span>
+                    </div>
+                    <div class="col-md-4">
+                        {{earn}}
+                    </div>
+                </div>
+                    <div class="row">
+                    <div class="col-md-4 text-right">
+                        Meal Count:
+                    </div>
+                    <div class="col-md-4">
+                        {{count}}
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="col-md-4 text-right">
+                           Average Tip per meal:
+                        </div>
+                        <div class="col-md-4">
+                            {{avgTip}}
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
