@@ -21,12 +21,12 @@ angular
         })
         .when('/newmeal', {
             templateUrl: 'views/newmeal.html',
-            controller: 'mealCtrl',
+            controller: 'MainCtrl',
             controllerAs: 'main'
         })
         .when('/earn', {
             templateUrl: 'views/earn.html',
-            controller: 'earnCtrl',
+            controller: 'MainCtrl',
             controllerAs: 'main'
         })
       .otherwise({
