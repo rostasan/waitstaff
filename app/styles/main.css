@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.gridborder {
+  border: 1px solid;
+    padding: .2em;
+
+}
+.gridtop {
+    border-top: 1px;
+
+}
+.gridside {
+    border-left: 1px;
+    border-right: 1px;
+
+}
+.grid {
+
+    font-size: 1.2em;
+    padding-top: 0em;
+    height: 3em;
+}
