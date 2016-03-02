@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name waitstaffApp
- * @description
- * # waitstaffApp
- *
- * Main module of the application.
- */
 angular
   .module('waitstaffApp', [
     'ngRoute'
@@ -21,12 +13,12 @@ angular
         })
         .when('/newmeal', {
             templateUrl: 'views/newmeal.html',
-            controller: 'MainCtrl',
+            controller: 'orderCtrl as order',
             controllerAs: 'main'
         })
         .when('/earn', {
             templateUrl: 'views/earn.html',
-            controller: 'MainCtrl',
+            controller: 'orderCtrl',
             controllerAs: 'main'
         })
       .otherwise({

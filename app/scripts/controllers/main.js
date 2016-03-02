@@ -8,7 +8,12 @@
  * Controller of the waitstaffApp
  */
 angular.module('waitstaffApp')
-  .controller('MainCtrl', ['$scope', function($scope) {
+  .controller('orderCtrl', ['$scope', 'orders', function($scope, orders) {
+          var self = this;
+          
+          self.addOrder = function(order){
+              orders.add(order)
+          }
             $scope.mealPrice = "";
             $scope.tax = "";
             $scope.tip = "";

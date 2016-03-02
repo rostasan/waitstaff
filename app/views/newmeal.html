@@ -5,14 +5,14 @@
                     </div>
                     <div class="col-md-3"></div>
                 </div>
-                <form>
+                <form ng-submit="order.addOrder(order.newOrder)">
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid gridside">
                             <span>Base Meal Price: $</span>
                         </div>
                         <div class="col-md-4">
-                            <span><input type="number" ng-model="mealPrice"/></span><br />
+                            <span><input type="number" ng-model="order.mealPrice"/></span><br />
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -22,7 +22,7 @@
                             <span>Tax Rate: % </span>
                         </div>
                         <div class="col-md-4">
-                            <span><input type="number" ng-model="tax" /></span>
+                            <span><input type="number" ng-model="order.tax" /></span>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -32,14 +32,14 @@
                             <span>Tip Percentage: % </span>
                         </div>
                         <div class="col-md-4">
-                            <span><input type="number" ng-model="tip"/></span>
+                            <span><input type="number" ng-model="order.tip"/></span>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid">
-                            <input type="submit" ng-click="add()" value="Submit" />
+                            <input type="submit" value="Submit" onclick="add()" />
                         </div>
                         <div class="col-md-4">
                             <input type="reset" value="Cancel" />
