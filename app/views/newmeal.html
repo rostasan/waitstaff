@@ -5,48 +5,52 @@
                     </div>
                     <div class="col-md-3"></div>
                 </div>
-                <form ng-submit="order.addOrder(order.newOrder)">
+
+          <form>
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid gridside">
                             <span>Base Meal Price: $</span>
                         </div>
                         <div class="col-md-4">
-                            <span><input type="number" ng-model="order.mealPrice"/></span><br />
+                            <span><input type="number" ng-model="mealPrice"/></span><br />
                         </div>
                         <div class="col-md-2"></div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid">
                             <span>Tax Rate: % </span>
                         </div>
                         <div class="col-md-4">
-                            <span><input type="number" ng-model="order.tax" /></span>
+                            <span><input type="number" ng-model="tax" /></span>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid">
                             <span>Tip Percentage: % </span>
                         </div>
                         <div class="col-md-4">
-                            <span><input type="number" ng-model="order.tip"/></span>
+                            <span><input type="number" ng-model="tip"/></span>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid">
-                            <input type="submit" value="Submit" />
+                            <input type="submit" value="Submit" ng-click="add()" />
                         </div>
                         <div class="col-md-4">
                             <input type="reset" value="Cancel" />
                         </div>
                         <div class="col-md-2"></div>
                     </div>
-                </form>
+         </form>
 
 
 
@@ -68,15 +72,17 @@
                     </div>
                     <div class="col-md-2"></div>
                 </div>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-4 text-right">
-                            <span>Tip </span>
-                        </div>
-                        <div class="col-md-4">
-                            <span>{{tipTotal}}</span>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-{{ orders }}
 
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 text-right">
+                        <span>Tip </span>
+                    </div>
+                    <div class="col-md-4">
+                        <span>{{mealTip}}</span>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+
+
+Form Validation

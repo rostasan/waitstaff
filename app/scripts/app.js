@@ -7,18 +7,16 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'views/home.html',
-            controller: 'homeCtrl',
-            controllerAs: 'main'
+            templateUrl: 'views/home.html'
         })
         .when('/newmeal', {
             templateUrl: 'views/newmeal.html',
-            controller: 'orderCtrl as order',
-            controllerAs: 'main'
+            controller: 'OrderCtrl as order',
+            controllerAs: ''
         })
         .when('/earn', {
             templateUrl: 'views/earn.html',
-            controller: 'orderCtrl',
+            controller: 'EarnCtrl',
             controllerAs: 'main'
         })
       .otherwise({
