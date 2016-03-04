@@ -15,6 +15,13 @@ angular.module('waitstaffApp')
                     earn: 0,
                     tipTotal: 0  
                 });
-           };s
+           };
+ /*          orders.calc = function(order){
+               subTotal = (mealPrice * tax) + mealPrice;
+                tipTotal = mealPrice * tip;
+                earn = earn + tipTotal;
+                count = count + 1;
+                avgTip = earn / count;
+           };*/
   return orders;
 });
