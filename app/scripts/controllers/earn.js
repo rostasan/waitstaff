@@ -6,6 +6,7 @@ angular.module('waitstaffApp')
     .controller('EarnCtrl', ['$rootScope','$scope', function($rootScope, $scope){
 
             $scope.avgTip = $rootScope.tipTotal / $rootScope.count;
+            $scope.avgTip = $scope.avgTip || 0;
     }
 
     ]);

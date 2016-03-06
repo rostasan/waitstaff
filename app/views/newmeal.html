@@ -6,14 +6,38 @@
                     <div class="col-md-3"></div>
                 </div>
 
-          <form>
+          <form novalidate name="form">
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid gridside">
-                            <span>Base Meal Price: $</span>
+                            <span>Base Meal Price:</span>
                         </div>
-                        <div class="col-md-4">
-                            <span><input type="number" ng-model="mealPrice"/></span><br />
+
+                        <div class="col-md-4 input-group">
+                            <span class="input-group-addon">$</span>
+                            <input
+                                    type="number"
+                                    ng-model="mealPrice"
+                                    min="0.01"
+                                    step="0.01"
+                                    max="10000"
+                                    required /><br />
+                        </div>
+
+                        <div ng-if="form.$submitted" ng-messages="form.mealPrice.$error" role="alert">
+                            <ng-messages-include src="views/formMessages.html"></ng-messages-include>
+                        </div>
+
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4 text-right grid">
+                            <span>Tax Rate:</span>
+                        </div>
+                        <div class="col-md-4 input-group">
+                            <span class="input-group-addon">%</span><input type="number" ng-model="tax" min="0.01" step="0.01" required  />
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -21,21 +45,10 @@
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid">
-                            <span>Tax Rate: % </span>
+                            <span>Tip Percentage:</span>
                         </div>
-                        <div class="col-md-4">
-                            <span><input type="number" ng-model="tax" /></span>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-4 text-right grid">
-                            <span>Tip Percentage: % </span>
-                        </div>
-                        <div class="col-md-4">
-                            <span><input type="number" ng-model="tip"/></span>
+                        <div class="col-md-4 input-group">
+                            <span class="input-group-addon">%</span><input type="number" ng-model="tip" min="0.01" step="0.01" required />
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -83,6 +96,3 @@
                     </div>
                     <div class="col-md-2"></div>
                 </div>
-
-
-Form Validation

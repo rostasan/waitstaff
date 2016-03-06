@@ -11,6 +11,9 @@ angular.module('waitstaffApp')
   .controller('OrderCtrl', ['$rootScope', '$scope', 'orders', function($rootScope, $scope, orders) {
         $rootScope.count = $rootScope.count || 0;
         $rootScope.tipTotal = $rootScope.tipTotal || 0;
+        $scope.mealPrice = $scope.mealPrice || 0;
+        $scope.tax = $scope.tax || 0;
+        $scope.tip = $scope.tip || 0;
 
 
 

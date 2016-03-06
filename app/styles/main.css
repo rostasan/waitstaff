@@ -22,3 +22,14 @@
     padding-top: 0em;
     height: 3em;
 }
+.input-group .form-control {
+    float: none;
+}
+.input-group .input-buttons {
+    position: relative;
+    z-index: 3;
+}
+ng-message {
+    font-size: 1em;
+    color: red;
+}

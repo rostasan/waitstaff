@@ -2,7 +2,8 @@
 
 angular
   .module('waitstaffApp', [
-    'ngRoute'
+    'ngRoute',
+    'ngMessages'
    ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -23,6 +24,7 @@ angular
         redirectTo: '/'
       });
   });
+
 
 
 
