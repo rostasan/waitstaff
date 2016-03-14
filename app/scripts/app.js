@@ -3,7 +3,8 @@
 angular
   .module('waitstaffApp', [
     'ngRoute',
-    'ngMessages'
+    'ngMessages',
+    'ngAnimate'
    ])
   .config(function ($routeProvider) {
     $routeProvider

@@ -29,7 +29,27 @@
     position: relative;
     z-index: 3;
 }
-ng-message {
-    font-size: 1em;
+
+.content {
+    padding: 10px;
     color: red;
+    overflow: hidden;
+    transition: all linear 2s;
 }
+.content.ng-enter,
+.content.ng-enter.ng-enter-active {
+    max-height:1em;
+    transition: all linear 2s;
+}
+
+.content.ng-leave,
+.content.ng-leave.ng-leave-active {
+    max-height:0;
+}
+
+
+
+
+
+https://scotch.io/tutorials/animating-angularjs-apps-ngview
+                            https://docs.angularjs.org/api/ng/directive/ngHide
