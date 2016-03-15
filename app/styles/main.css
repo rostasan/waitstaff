@@ -30,26 +30,88 @@
     z-index: 3;
 }
 
-.content {
-    padding: 10px;
+
+/* Animation
+
+
+.ngMessageClass.ng-enter-add {
+    -webkit-transition:.5s linear all;
+    -moz-transition: .5s linear all;
+    -ms-transition: .5s linear all;
+    -o-transition: .5s linear all;
+    transition: .5s linear all;
+    opacity: 0;
+}
+
+.ngMessageClass.ng-enter.ng-enter-active-add {
+    opacity: 1;
     color: red;
-    overflow: hidden;
-    transition: all linear 2s;
 }
-.content.ng-enter,
-.content.ng-enter.ng-enter-active {
-    max-height:1em;
-    transition: all linear 2s;
-}
+http://embed.plnkr.co/oPrpTmhWCeR8zz2iiYSf/preview
 
-.content.ng-leave,
-.content.ng-leave.ng-leave-active {
-    max-height:0;
+*/
+.ngMessagesClass.ng-active-add {
+    transition: 0.3s linear all;
+    background-color: red;
 }
 
+.ngMessagesClass.ng-active {
+    background-color: red;
+}
+
+.ngMessagesClass.ng-inactive-add {
+    transition: 0.3s linear all;
+    background-color: white;
+}
+
+.ngMessagesClass.ng-inactive {
+    background-color: white;
+}
+
+.ngMessageClass {
+    color: white;
+}
+
+.ngMessageClass.ng-enter {
+    transition: 0.3s linear all;
+    color: transparent;
+}
+
+.ngMessageClass.ng-enter-active {
+    color: white;
+}
+
+.ngMessageClass.ng-leave {
+    transition: 0.3s linear all;
+    color: white;
+}
+
+.ngMessageClass.ng-leave-active {
+    color: transparent;
+}
+
+
+/* animate ng-view */
+
+.page.ng-enter {
+    -webkit-transition: 1s linear all;
+    -moz-transition: 1s linear all;
+    -ms-transition: 1s linear all;
+    -o-transition: 1s linear all;
+    transition: 1s linear all;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.page.ng-enter.ng-enter-active {
+   opacity: 1;
+    transform: translate(0px);
+
+}
 
 
 
-
+/*
 https://scotch.io/tutorials/animating-angularjs-apps-ngview
                             https://docs.angularjs.org/api/ng/directive/ngHide
+*/
