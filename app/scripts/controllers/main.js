@@ -20,6 +20,7 @@ angular.module('waitstaffApp')
 
 
         $scope.add = function () {
+
                           $scope.subTotal = ($scope.mealPrice * $scope.tax) + $scope.mealPrice;
                           $scope.mealTip = $scope.mealPrice * $scope.tip;
                           $scope.earn = $scope.earn + $scope.tipTotal;

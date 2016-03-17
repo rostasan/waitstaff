@@ -6,7 +6,7 @@
                     <div class="col-md-3"></div>
                 </div>
 
-          <form novalidate name="form">
+          <form novalidate name="form" ng-submit="form.$valid && add()">
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid gridside">
@@ -25,8 +25,8 @@
                                     required /><br />
                         </div>
 
-                        <div ng-if="form.$submitted" ng-messages="form.mealPrice.$error" role="alert">
-                            <ng-messages-include src="views/formMessages.html" class="ngMessageClass"></ng-messages-include>
+                        <div ng-if="form.$submitted" ng-messages="form.mealPrice.$error" role="alert" class="message">
+                            <ng-messages-include src="views/formMessages.html"></ng-messages-include>
                         </div>
 
                         <div class="col-md-2"></div>
@@ -38,7 +38,18 @@
                             <span>Tax Rate:</span>
                         </div>
                         <div class="col-md-4 input-group">
-                            <span class="input-group-addon">%</span><input type="number" ng-model="tax" min="0.01" step="0.01" required  />
+                            <span class="input-group-addon">%</span>
+                            <input
+                                   name="tax"
+                                   type="number"
+                                   ng-model="tax"
+                                   min="0.01"
+                                   step="0.01"
+                                   max="10000"
+                                   required /><br />
+                        </div>
+                        <div ng-if="form.$submitted" ng-messages="form.tax.$error" role="alert" class="message">
+                            <ng-messages-include src="views/formMessages.html"></ng-messages-include>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -49,7 +60,18 @@
                             <span>Tip Percentage:</span>
                         </div>
                         <div class="col-md-4 input-group">
-                            <span class="input-group-addon">%</span><input type="number" ng-model="tip" min="0.01" step="0.01" required />
+                            <span class="input-group-addon">%</span>
+                            <input
+                                name="tip"
+                                type="number"
+                                ng-model="tip"
+                                min="0.01"
+                                step="0.01"
+                                max="10000"
+                                required /><br />
+                        </div>
+                        <div ng-if="form.$submitted" ng-messages="form.tip.$error" role="alert" class="message">
+                            <ng-messages-include src="views/formMessages.html"></ng-messages-include>
                         </div>
                         <div class="col-md-2"></div>
                     </div>
@@ -57,7 +79,7 @@
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-4 text-right grid">
-                            <input type="submit" value="Submit" ng-click="add()" />
+                            <input type="submit" value="Submit"  />
                         </div>
                         <div class="col-md-4">
                             <input type="reset" value="Cancel" />
