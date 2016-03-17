@@ -50,48 +50,28 @@
 http://embed.plnkr.co/oPrpTmhWCeR8zz2iiYSf/preview
 
 */
-.ngMessagesClass.ng-active-add {
-    transition: 0.3s linear all;
-    background-color: red;
+
+.message.ng-enter {
+    -webkit-transition: 1s linear all;
+    -moz-transition: 1s linear all;
+    -ms-transition: 1s linear all;
+    -o-transition: 1s linear all;
+    transition: 1s linear all;
+    color: red;
+    transform: translateY(10px);
+    opacity: 0;
 }
 
-.ngMessagesClass.ng-active {
-    background-color: red;
-}
-
-.ngMessagesClass.ng-inactive-add {
-    transition: 0.3s linear all;
-    background-color: white;
-}
-
-.ngMessagesClass.ng-inactive {
-    background-color: white;
-}
-
-.ngMessageClass {
-    color: white;
-}
-
-.ngMessageClass.ng-enter {
-    transition: 0.3s linear all;
-    color: transparent;
-}
-
-.ngMessageClass.ng-enter-active {
-    color: white;
-}
-
-.ngMessageClass.ng-leave {
-    transition: 0.3s linear all;
-    color: white;
-}
-
-.ngMessageClass.ng-leave-active {
-    color: transparent;
+.message.ng-enter.ng-enter-active {
+    color: red;  
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 
-/* animate ng-view */
+
+
+/* animate ng-view 
 
 .page.ng-enter {
     -webkit-transition: 1s linear all;
@@ -109,7 +89,7 @@ http://embed.plnkr.co/oPrpTmhWCeR8zz2iiYSf/preview
 
 }
 
-
+*/
 
 /*
 https://scotch.io/tutorials/animating-angularjs-apps-ngview
